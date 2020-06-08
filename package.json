@@ -1,0 +1,35 @@
+{
+  "name": "agility-artifact",
+  "version": "0.0.1",
+  "author": "Agility Jin <agility_jin@outlook.com>",
+  "private": true,
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "engines": {
+    "npm": ">=5.2.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@lerna/project": "^3.21.0",
+    "commitizen": "^4.1.2",
+    "cz-lerna-changelog": "^2.0.2",
+    "husky": "^4.2.5"
+  }
+}

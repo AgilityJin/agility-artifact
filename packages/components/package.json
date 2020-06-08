@@ -1,0 +1,12 @@
+{
+  "name": "@agility-artifact/components",
+  "version": "0.0.1",
+  "description": "跨端组件库",
+  "main": "index.js",
+  "author": "Agility Jin <agility_jin@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.3"
+  }
+}
