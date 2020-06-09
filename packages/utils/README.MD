@@ -19,6 +19,8 @@ all.getOs()
 
 ## 使用文档
 
+> yarn docs 执行后可看
+
 [Getting Started](./docs/index.html)
 
 ## 更新记录

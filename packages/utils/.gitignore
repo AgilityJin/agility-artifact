@@ -3,6 +3,7 @@ node_modules
 dist
 lib
 coverage
+docs
 
 # local env files
 .env.local
