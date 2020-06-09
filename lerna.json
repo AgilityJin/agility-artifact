@@ -4,7 +4,7 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "ignoreChanges": ["*.md"]
+      "ignoreChanges": ["*.md", "./**/test/**/*.spec.*"]
     },
     "bootstrap": {
       "hoist": true

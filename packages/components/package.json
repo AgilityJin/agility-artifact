@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Agility Jin <agility_jin@outlook.com>",
   "license": "MIT",
-  "private": true,
+  "homepage": "https://github.com/AgilityJin/agility-artifact",
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.3"
   }

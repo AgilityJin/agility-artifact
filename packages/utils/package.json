@@ -11,6 +11,7 @@
     "lib",
     "docs"
   ],
+  "homepage": "https://github.com/AgilityJin/agility-artifact",
   "author": "Agility <Agility_Jin@outlook.com>",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
