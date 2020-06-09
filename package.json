@@ -2,7 +2,14 @@
   "name": "agility-artifact",
   "version": "0.0.1",
   "author": "Agility Jin <agility_jin@outlook.com>",
+  "description": "通用工具包",
   "private": true,
+  "homepage": "https://github.com/AgilityJin/agility-artifact",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgilityJin/agility-artifact.git"
+  },
   "scripts": {
     "commit": "git-cz"
   },

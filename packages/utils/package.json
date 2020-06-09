@@ -1,0 +1,77 @@
+{
+  "name": "@agility-artifact/utils",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "共通工具库",
+  "keywords": [],
+  "main": "lib/main.js",
+  "module": "lib/main.js",
+  "typings": "lib/types/main.d.ts",
+  "files": [
+    "lib",
+    "docs"
+  ],
+  "author": "Agility <Agility_Jin@outlook.com>",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "dev": "cross-env NODE_ENV=development rollup -c -w rollup.config.js",
+    "build": "npm run clean && cross-env NODE_ENV=production rollup -c build/rollup.config.js",
+    "docs": "typedoc --out docs --target es6 --theme minimal --mode file src",
+    "start": "rollup -c rollup.config.ts -w",
+    "test": "jest --coverage",
+    "lint": "eslint --ext .ts,.js --ignore-path ../../.gitignore src",
+    "fix": "eslint --fix --ext .ts,.js --ignore-path ../../.gitignore src",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^3.1.43",
+    "@types/fingerprintjs2": "^2.0.0",
+    "@types/jest": "^24.0.19",
+    "@types/lodash": "^4.14.149",
+    "@types/nanoid": "^2.1.0",
+    "@types/node": "^12.11.1",
+    "@types/qs": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "axios": "^0.19.1",
+    "crypto-js": "^3.1.9-1",
+    "doctoc": "^1.4.0",
+    "eslint": "^6.5.1",
+    "fingerprintjs2": "^2.1.0",
+    "jest": "^24.9.0",
+    "jest-config": "^24.9.0",
+    "lodash": "^4.17.15",
+    "mockjs": "^1.1.0",
+    "nanoid": "^3.0.0",
+    "qs": "^6.9.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.25.1",
+    "rollup-plugin-analyzer": "^3.2.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "standard-version": "^7.0.1",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "cross-env": "^6.0.3"
+  },
+  "peerDependencies": {
+    "axios": "^0.19.0",
+    "crypto-js": "^3.1.9-1",
+    "fingerprintjs2": "^2.1.0",
+    "lodash": "^4.17.15",
+    "nanoid": "^3.0.0"
+  }
+}
