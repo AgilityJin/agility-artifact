@@ -32,18 +32,6 @@ all.getOs()
 * 新增的内容在doc文档内应有详细的说明
 * 每一版的发布都应生成完成的测试覆盖报告
 
-## 发布npm库
-
-1. 确认当前npm源正确`https://registry.npmjs.org/`
-2. 确认登录该源的账号正确,并具备发布库的权限
-3. `yarn run build`及`yarn run docs` 打包生产代码及组件文档
-4. 执行`git add -A`及`yarn run commit`提交更改
-5. 发布命令为`yarn run release -- --release-as [major/minor/patch]` 根据更新程度决定采用的的release as值, 如果为内测或公测版本则补充prerelease参数 `yarn run release -- --release-as [major/minor/patch] --prerelease [alpha/beta]`
-6. `git push --follow-tags origin dev` 推送到远程分支
-7. `yarn publish`正式发布 or `yarn publish --tag [alpha/beta]`内测或公测发布
-8. 切换至master, `git merge dev` 拉取更改
-9. `git push origin master` 更新远程仓库
-
 ## cli 命令
 
 * `yarn run clean`移除build文件目录

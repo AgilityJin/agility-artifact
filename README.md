@@ -6,7 +6,7 @@ yarn install
 
 ## 代码提交
 
-yarn commit
+yarn commit // 如果发生异常,可全局安装commitizen依赖包再次尝试
 
 1. 本次提交的类型(必填)
     * feat 新特性
@@ -25,3 +25,11 @@ yarn commit
 5. 列出被终止的更改,一般是问题的链接(可选)
 6. 列出此更改所关闭的ISSUES问题, 如 #31, #34(可选)
 7. 选择本次更改所影响的package名称(可空)
+
+## 发布npm库
+
+1. 确认当前npm源正确`https://registry.npmjs.org/`
+2. 确认登录该源的账号正确,并具备发布库的权限
+3. 待发布项目build完成
+4. 执行`git add -A`及`yarn run commit`提交更改
+5. yarn lerna publish

@@ -18,4 +18,4 @@ function asyncTask<T, U = Error>(
     });
 }
 
-export default asyncTask;
+export default asyncTask
