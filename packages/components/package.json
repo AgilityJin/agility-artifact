@@ -1,6 +1,6 @@
 {
   "name": "@agility-artifact/components",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "跨端组件库",
   "main": "index.js",
   "author": "Agility Jin <agility_jin@outlook.com>",
