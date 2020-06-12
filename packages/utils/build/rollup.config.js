@@ -1,6 +1,3 @@
-/**
- * Created by Jaron Long on 2019/10/21
- */
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
@@ -21,7 +18,7 @@ function entry(input, output) {
     // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
     external: ['window', 'document'],
     watch: {
-      include: 'src/**'
+      include: '../src/**'
     },
     plugins: [
       // Allow json resolution

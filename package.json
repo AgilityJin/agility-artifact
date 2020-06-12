@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/AgilityJin/agility-artifact.git"
   },
+  "private": true,
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
