@@ -6,7 +6,9 @@ export enum ISmsAliyunStatus {
   'isv.SMS_TEMPLATE_ILLEGAL' = '模板不合法',
   'isv.SMS_SIGNATURE_SCENE_ILLEGAL' = '短信所使用签名场景非法',
   'isv.PARAM_LENGTH_LIMIT' = '参数长度不可超过20',
-  'isv.SMS_SIGNATURE_ILLEGAL' = '短信签名不合法'
+  'isv.SMS_SIGNATURE_ILLEGAL' = '短信签名不合法',
+  'isv.BUSINESS_LIMIT_CONTROL' = '触发分钟级流控, 请等待1分钟后重试',
+  'isv.BUSINESS_LIMIT_CONTROLError' = '触发小时级流控, 请等待一小时后重试',
 }
 
 export interface IAliyunInitOptions {
