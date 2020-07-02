@@ -9,7 +9,7 @@ import pkg from '../package.json'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 const { entrysDir } = require('./entry')
 
-const libraryName = pkg.name
+const libraryName = 'HelperGdpUtils'
 
 function entry(input, output) {
   return {

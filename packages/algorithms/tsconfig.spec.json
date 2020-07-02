@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "declaration": false,
+    "types": [
+      "@types/jest"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "~": [
+        "src"
+      ],
+      "~/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "./test/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "../../node_modules"
+  ]
+}

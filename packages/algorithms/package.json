@@ -1,0 +1,65 @@
+{
+  "name": "@agility-artifact/algorithms",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "算法",
+  "keywords": [],
+  "main": "lib/main.js",
+  "module": "lib/main.js",
+  "typings": "lib/types/main.d.ts",
+  "files": [
+    "lib",
+    "docs"
+  ],
+  "homepage": "https://github.com/AgilityJin/agility-artifact",
+  "author": "Agility <Agility_Jin@outlook.com>",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "dev": "cross-env NODE_ENV=development rollup -c -w rollup.config.js",
+    "build": "npm run clean && cross-env NODE_ENV=production rollup -c build/rollup.config.js",
+    "docs": "typedoc --out docs --target es6 --theme minimal --mode file src",
+    "start": "rollup -c rollup.config.ts -w",
+    "test": "jest --coverage",
+    "lint": "eslint --ext .ts,.js --ignore-path ../../.gitignore src",
+    "fix": "eslint --fix --ext .ts,.js --ignore-path ../../.gitignore src",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/mathjs": "^6.0.5",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "doctoc": "^1.4.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "jest-config": "^24.9.0",
+    "mathjs": "^7.0.1",
+    "mockjs": "^1.1.0",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.25.1",
+    "rollup-plugin-analyzer": "^3.2.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "standard-version": "^7.0.1",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "cross-env": "^6.0.3"
+  },
+  "peerDependencies": {
+    "mathjs": "^7.0.1"
+  }
+}

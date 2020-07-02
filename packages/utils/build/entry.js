@@ -1,30 +1,31 @@
 const path = require('path')
 
-const srcPath = path.join(__dirname, '../src')
+const entryList = [
+  // all
+  'main.ts',
+  // methods
+  'methods/async-task.ts',
+  'methods/clear-local-storage.ts',
+  'methods/clear-session-storage.ts',
+  'methods/create-enum.ts',
+  'methods/decode-base64.ts',
+  'methods/generate-fingerprint.ts',
+  'methods/get-birthday-from-idcard.ts',
+  'methods/get-gender-from-idcard.ts',
+  'methods/get-local-storage.ts',
+  'methods/get-os.ts',
+  'methods/get-session-storage.ts',
+  'methods/get-url-param.ts',
+  'methods/nanoid.ts',
+  'methods/set-local-storage.ts',
+  'methods/set-object.ts',
+  'methods/set-session-storage.ts',
+  'methods/set-url-params.ts',
+  // factories
+  'factories/responsibility-chain.ts',
+  'factories/request/request.ts',
+]
+
 module.exports = {
-  entrysDir: [
-    // all
-    path.join(srcPath, 'main.ts'),
-    // methods
-    path.join(srcPath, 'methods/async-task.ts'),
-    path.join(srcPath, 'methods/clear-local-storage.ts'),
-    path.join(srcPath, 'methods/clear-session-storage.ts'),
-    path.join(srcPath, 'methods/create-enum.ts'),
-    path.join(srcPath, 'methods/decode-base64.ts'),
-    path.join(srcPath, 'methods/generate-fingerprint.ts'),
-    path.join(srcPath, 'methods/get-birthday-from-idcard.ts'),
-    path.join(srcPath, 'methods/get-gender-from-idcard.ts'),
-    path.join(srcPath, 'methods/get-local-storage.ts'),
-    path.join(srcPath, 'methods/get-os.ts'),
-    path.join(srcPath, 'methods/get-session-storage.ts'),
-    path.join(srcPath, 'methods/get-url-param.ts'),
-    path.join(srcPath, 'methods/nanoid.ts'),
-    path.join(srcPath, 'methods/set-local-storage.ts'),
-    path.join(srcPath, 'methods/set-object.ts'),
-    path.join(srcPath, 'methods/set-session-storage.ts'),
-    path.join(srcPath, 'methods/set-url-params.ts'),
-    // factories
-    path.join(srcPath, 'factories/responsibility-chain.ts'),
-    path.join(srcPath, 'factories/request/request.ts'),
-  ]
+  entrysDir: entryList.map(str => path.join(__dirname, '../src', str))
 }
