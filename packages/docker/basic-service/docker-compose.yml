@@ -1,0 +1,53 @@
+version: "3"
+networks:
+  basic_service:
+services:
+  nginx:
+    build: "./nginx"
+    restart: always
+    networks:
+      - basic_service
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/root/www:/html"
+  db:
+    image: mysql:5.7.21
+    restart: always
+    networks:
+      - basic_service
+    container_name: basic_service_db
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_USER: username
+      MYSQL_PASSWORD: username_password
+      MYSQL_DATABASE: db_name
+    command: --default-time-zone='+8:00' --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - "/root/basic_service/db:/var/lib/mysql"
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis:6.0
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - basic_service
+    volumes:
+      - "./redis/config/redis.conf:/usr/local/etc/redis/redis.conf"
+      - "./redis/data:/data"
+    command: redis-server /usr/local/etc/redis/redis.conf
+  # jenkins:
+  #  image: jenkins/jenkins:lts
+  #  restart: always
+  #  container_name: basic_service_jenkins
+  #  ports:
+  #    - 4000:8080
+  #  command: --prefix=/jenkins
+  #  volumes:
+  #    - "/root/basic_service/jenkins:/var/jenkins_home"
+
+# 另可直接架设供容器访问的主机网络
+# docker network create -d bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 localNet
