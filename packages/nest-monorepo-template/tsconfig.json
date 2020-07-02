@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2017",
+    "lib": [
+      "es2019"
+    ],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "incremental": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/admin": [
+        "apps/admin/src"
+      ],
+      "~/admin/*": [
+        "apps/admin/src/*"
+      ],
+      "@common": [
+        "common"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
+      "@type": [
+        "types"
+      ],
+      "@type/*": [
+        "types/*"
+      ],
+      "@app/db": [
+        "libs/db/src"
+      ],
+      "@app/db/*": [
+        "libs/db/src/*"
+      ],
+      "@app/config": [
+        "libs/config/src"
+      ],
+      "@app/config/*": [
+        "libs/config/src/*"
+      ],
+      "@app/oss": [
+        "libs/oss/src"
+      ],
+      "@app/oss/*": [
+        "libs/oss/src/*"
+      ],
+      "@app/sms": [
+        "libs/sms/src"
+      ],
+      "@app/sms/*": [
+        "libs/sms/src/*"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
