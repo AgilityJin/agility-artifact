@@ -37,8 +37,8 @@ services:
     networks:
       - basic_service
     volumes:
-      - "./redis/config/redis.conf:/usr/local/etc/redis/redis.conf"
-      - "./redis/data:/data"
+      - "/root/basic-service/redis/config/redis.conf:/usr/local/etc/redis/redis.conf"
+      - "/root/basic-service/redis/data:/data"
     command: redis-server /usr/local/etc/redis/redis.conf
   # jenkins:
   #  image: jenkins/jenkins:lts
