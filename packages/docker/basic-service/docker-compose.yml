@@ -3,7 +3,7 @@ networks:
   basic_service:
 services:
   nginx:
-    build: "./nginx"
+    image: nginx
     restart: always
     networks:
       - basic_service
@@ -12,6 +12,7 @@ services:
       - "443:443"
     volumes:
       - "/root/www:/html"
+      - "/root/basic-service/nginx/nginx.conf:/etc/nginx/nginx.conf"
   db:
     image: mysql:5.7.21
     restart: always
